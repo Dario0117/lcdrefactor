@@ -16,3 +16,22 @@ exports.cleanParams = (input) => {
 };
 
 exports.CONSTANTS = CONSTANTS;
+
+exports.matrix = (rows, cols) => {
+    let matrix = new Array(rows);
+    for(let i = 0; i < rows; i++){
+        matrix[i] = new Array(cols);
+    }
+    return matrix;
+};
+
+exports.printMatrix = (m) => {
+    for(let i = 0; i < m.length ; i++){
+        for(let j = 0; j < m[i].length ; j++){
+            process.stdout.write(
+                (m[i][j] == null) ? " " : m[i][j]
+            );
+        }
+        console.log("");
+    }
+};
