@@ -1,7 +1,12 @@
+const CONSTANTS = {
+    ERROR_INVALID_INPUT: 'Entrada inválida'
+};
+
 exports.cleanParams = (input) => {
     let regexp = /\b([2-9]|10?),\d+/;
-    if(input.match(regexp)[0] !== input){
-        throw new Error('Entrada inválida');
+    let matches = Object.assign([], input.match(regexp));
+    if(matches[0] !== input){
+        throw new Error(CONSTANTS.ERROR_INVALID_INPUT);
     }
     let [size, numberList] = input.split(',');
     let numbers = numberList.split('')
@@ -9,3 +14,5 @@ exports.cleanParams = (input) => {
     size = +size;
     return { size, numbers };
 };
+
+exports.CONSTANTS = CONSTANTS;
