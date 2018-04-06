@@ -1,5 +1,6 @@
 const readline = require('readline');
 const Utils = require('./src/Utils');
+const Board = require('./src/Board');
 
 const rl = readline.createInterface(process.stdin, process.stdout);
 
@@ -10,7 +11,8 @@ rl.on('line', function (line) {
     if (line === "0,0") rl.close();
     try {
         let parsedInput = Utils.cleanParams(line);
-        console.log(parsedInput);
+        let board = new Board(parsedInput);
+        board.print();
     }catch (e) {
         console.log(e.toString());
     }
