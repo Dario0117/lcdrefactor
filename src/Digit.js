@@ -1,4 +1,4 @@
-const { Matrix } = require('./Utils');
+const Matrix = require('./Utils/Matrix');
 
 class Digit{
     constructor(size){
@@ -8,8 +8,9 @@ class Digit{
         this.vertical = '|';
     }
 
-    generate(number){
-        let m = new Matrix(this.rows, this.columns);
+    generateMatrix(number){
+        let matrix = new Matrix(this.rows, this.columns);
+        let m = matrix.get();
         switch(number){
             case 0:
                 this.addTop(m);
@@ -18,38 +19,38 @@ class Digit{
                 this.addLeftBot(m);
                 this.addRightTop(m);
                 this.addRightBot(m);
-                return m;
+                return matrix;
             case 1:
                 this.addRightTop(m);
                 this.addRightBot(m);
-                return m;
+                return matrix;
             case 2:
                 this.addTop(m);
                 this.addBot(m);
                 this.addMid(m);
                 this.addLeftBot(m);
                 this.addRightTop(m);
-                return m;
+                return matrix;
             case 3:
                 this.addTop(m);
                 this.addBot(m);
                 this.addMid(m);
                 this.addRightBot(m);
                 this.addRightTop(m);
-                return m;
+                return matrix;
             case 4:
                 this.addRightTop(m);
                 this.addRightBot(m);
                 this.addLeftTop(m);
                 this.addMid(m);
-                return m;
+                return matrix;
             case 5:
                 this.addTop(m);
                 this.addBot(m);
                 this.addMid(m);
                 this.addLeftTop(m);
                 this.addRightBot(m);
-                return m;
+                return matrix;
             case 6:
                 this.addTop(m);
                 this.addBot(m);
@@ -57,12 +58,12 @@ class Digit{
                 this.addLeftTop(m);
                 this.addLeftBot(m);
                 this.addRightBot(m);
-                return m;
+                return matrix;
             case 7:
                 this.addTop(m);
                 this.addRightTop(m);
                 this.addRightBot(m);
-                return m;
+                return matrix;
             case 8:
                 this.addTop(m);
                 this.addBot(m);
@@ -71,14 +72,14 @@ class Digit{
                 this.addLeftBot(m);
                 this.addRightTop(m);
                 this.addRightBot(m);
-                return m;
+                return matrix;
             case 9:
                 this.addRightTop(m);
                 this.addRightBot(m);
                 this.addLeftTop(m);
                 this.addMid(m);
                 this.addTop(m);
-                return m;
+                return matrix;
         }
     }
 
