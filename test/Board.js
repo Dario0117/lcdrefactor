@@ -14,7 +14,7 @@ describe('Clase src/Board', function () {
             [null,null,null,null,null,null,null,null,null,null,null,"-" ,"-" ,null,null,null,"-" ,"-" ,null,null,null,"-" ,"-" ,null,null,null,"-" ,"-" ,null,null,null,"-" ,"-" ,null,null,null,null,null,null,null,null,"-" ,"-" ,null,null,null,"-" ,"-" ,null],
             ["|" ,null,null,"|" ,null,null,null,null,"|" ,null,"|" ,null,null,null,null,null,null,null,"|" ,null,null,null,null,"|" ,null,null,null,null,"|" ,null,"|" ,null,null,"|" ,null,null,null,null,"|" ,null,"|" ,null,null,"|" ,null,null,null,null,"|" ],
             ["|" ,null,null,"|" ,null,null,null,null,"|" ,null,"|" ,null,null,null,null,null,null,null,"|" ,null,null,null,null,"|" ,null,null,null,null,"|" ,null,"|" ,null,null,"|" ,null,null,null,null,"|" ,null,"|" ,null,null,"|" ,null,null,null,null,"|" ],
-            [null,"-" ,"-" ,null,null,null,null,null,null,null,null,"-" ,"-" ,null,null,null,"-" ,"-" ,null,null,null,null,null,null,null,null,"-" ,"-" ,null,null,null,"-" ,"-" ,null,null,null,null,null,null,null,null,"-" ,"-" ,null,null,null,null,null,null]
+            [null,"-" ,"-" ,null,null,null,null,null,null,null,null,"-" ,"-" ,null,null,null,"-" ,"-" ,null,null,null,null,null,null,null,null,"-" ,"-" ,null,null,null,"-" ,"-" ,null,null,null,null,null,null,null,null,"-" ,"-" ,null,null,null,"-" ,"-" ,null]
         ];
         board.generate();
         let generatedMatrix = board.board.get();

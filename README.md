@@ -12,7 +12,7 @@ Inserte el tamaño y los números (0,0 para terminar)> 1,0123456789
 | |   |   |   | | | |   |     | | | | |
          -   -   -   -   -       -   -
 | |   | |     |   |   | | |   | | |   |
- -       -   -       -   -       -
+ -       -   -       -   -       -   -
 Inserte el tamaño y los números (0,0 para terminar)> 3,0123456789
  ---         ---   ---         ---   ---   ---   ---   ---
 |   |     |     |     | |   | |     |         | |   | |   |
@@ -22,7 +22,7 @@ Inserte el tamaño y los números (0,0 para terminar)> 3,0123456789
 |   |     | |         |     |     | |   |     | |   |     |
 |   |     | |         |     |     | |   |     | |   |     |
 |   |     | |         |     |     | |   |     | |   |     |
- ---         ---   ---         ---   ---         ---
+ ---         ---   ---         ---   ---         ---   ---
 Inserte el tamaño y los números (0,0 para terminar)> 4,0123456789
  ----          ----   ----          ----   ----   ----   ----   ----
 |    |      |      |      | |    | |      |           | |    | |    |
@@ -34,7 +34,7 @@ Inserte el tamaño y los números (0,0 para terminar)> 4,0123456789
 |    |      | |           |      |      | |    |      | |    |      |
 |    |      | |           |      |      | |    |      | |    |      |
 |    |      | |           |      |      | |    |      | |    |      |
- ----          ----   ----          ----   ----          ----
+ ----          ----   ----          ----   ----          ----   ----
 Inserte el tamaño y los números (0,0 para terminar)> 0,0
 Saliendo de la Board LCD... ;)
 ```

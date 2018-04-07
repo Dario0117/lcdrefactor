@@ -79,6 +79,7 @@ class Digit{
                 this.addLeftTop(m);
                 this.addMid(m);
                 this.addTop(m);
+                this.addBot(m);
                 return matrix;
         }
     }
