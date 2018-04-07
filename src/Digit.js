@@ -1,4 +1,4 @@
-const Utils = require('./Utils');
+const { matrix } = require('./Utils');
 
 class Digit{
     constructor(size){
@@ -9,76 +9,76 @@ class Digit{
     }
 
     generate(number){
-        let matrix = Utils.matrix(this.rows, this.columns);
+        let m = matrix(this.rows, this.columns);
         switch(number){
             case 0:
-                this.addTop(matrix);
-                this.addBot(matrix);
-                this.addLeftTop(matrix);
-                this.addLeftBot(matrix);
-                this.addRightTop(matrix);
-                this.addRightBot(matrix);
-                return matrix;
+                this.addTop(m);
+                this.addBot(m);
+                this.addLeftTop(m);
+                this.addLeftBot(m);
+                this.addRightTop(m);
+                this.addRightBot(m);
+                return m;
             case 1:
-                this.addRightTop(matrix);
-                this.addRightBot(matrix);
-                return matrix;
+                this.addRightTop(m);
+                this.addRightBot(m);
+                return m;
             case 2:
-                this.addTop(matrix);
-                this.addBot(matrix);
-                this.addMid(matrix);
-                this.addLeftBot(matrix);
-                this.addRightTop(matrix);
-                return matrix;
+                this.addTop(m);
+                this.addBot(m);
+                this.addMid(m);
+                this.addLeftBot(m);
+                this.addRightTop(m);
+                return m;
             case 3:
-                this.addTop(matrix);
-                this.addBot(matrix);
-                this.addMid(matrix);
-                this.addRightBot(matrix);
-                this.addRightTop(matrix);
-                return matrix;
+                this.addTop(m);
+                this.addBot(m);
+                this.addMid(m);
+                this.addRightBot(m);
+                this.addRightTop(m);
+                return m;
             case 4:
-                this.addRightTop(matrix);
-                this.addRightBot(matrix);
-                this.addLeftTop(matrix);
-                this.addMid(matrix);
-                return matrix;
+                this.addRightTop(m);
+                this.addRightBot(m);
+                this.addLeftTop(m);
+                this.addMid(m);
+                return m;
             case 5:
-                this.addTop(matrix);
-                this.addBot(matrix);
-                this.addMid(matrix);
-                this.addLeftTop(matrix);
-                this.addRightBot(matrix);
-                return matrix;
+                this.addTop(m);
+                this.addBot(m);
+                this.addMid(m);
+                this.addLeftTop(m);
+                this.addRightBot(m);
+                return m;
             case 6:
-                this.addTop(matrix);
-                this.addBot(matrix);
-                this.addMid(matrix);
-                this.addLeftTop(matrix);
-                this.addLeftBot(matrix);
-                this.addRightBot(matrix);
-                return matrix;
+                this.addTop(m);
+                this.addBot(m);
+                this.addMid(m);
+                this.addLeftTop(m);
+                this.addLeftBot(m);
+                this.addRightBot(m);
+                return m;
             case 7:
-                this.addTop(matrix);
-                this.addRightTop(matrix);
-                this.addRightBot(matrix);
-                return matrix;
+                this.addTop(m);
+                this.addRightTop(m);
+                this.addRightBot(m);
+                return m;
             case 8:
-                this.addTop(matrix);
-                this.addBot(matrix);
-                this.addMid(matrix);
-                this.addLeftTop(matrix);
-                this.addLeftBot(matrix);
-                this.addRightTop(matrix);
-                this.addRightBot(matrix);
-                return matrix;
+                this.addTop(m);
+                this.addBot(m);
+                this.addMid(m);
+                this.addLeftTop(m);
+                this.addLeftBot(m);
+                this.addRightTop(m);
+                this.addRightBot(m);
+                return m;
             case 9:
-                this.addRightTop(matrix);
-                this.addRightBot(matrix);
-                this.addLeftTop(matrix);
-                this.addMid(matrix);
-                this.addTop(matrix);
-                return matrix;
+                this.addRightTop(m);
+                this.addRightBot(m);
+                this.addLeftTop(m);
+                this.addMid(m);
+                this.addTop(m);
+                return m;
         }
     }
 

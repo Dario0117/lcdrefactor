@@ -2,7 +2,7 @@ const CONSTANTS = {
     ERROR_INVALID_INPUT: 'Entrada inválida'
 };
 
-exports.cleanParams = (input) => {
+function cleanParams (input){
     let regexp = /\b([2-9]|10?),\d+/;
     let matches = Object.assign([], input.match(regexp));
     if(matches[0] !== input){
@@ -13,19 +13,17 @@ exports.cleanParams = (input) => {
                             .map((number)=> +number);
     size = +size;
     return { size, numbers };
-};
+}
 
-exports.CONSTANTS = CONSTANTS;
-
-exports.matrix = (rows, cols) => {
+function matrix (rows, cols){
     let matrix = new Array(rows);
     for(let i = 0; i < rows; i++){
         matrix[i] = new Array(cols);
     }
     return matrix;
-};
+}
 
-exports.printMatrix = (m) => {
+function printMatrix (m){
     for(let i = 0; i < m.length ; i++){
         for(let j = 0; j < m[i].length ; j++){
             process.stdout.write(
@@ -34,4 +32,11 @@ exports.printMatrix = (m) => {
         }
         console.log("");
     }
+}
+
+module.exports = {
+    CONSTANTS,
+    printMatrix,
+    cleanParams,
+    matrix
 };

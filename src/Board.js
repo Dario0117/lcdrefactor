@@ -1,12 +1,12 @@
 const Digit = require('./Digit');
-const Utils = require('./Utils');
+const { matrix, printMatrix } = require('./Utils');
 
 class Board{
     constructor({size, numbers}){
         this.numbers = numbers;
         this.lcd = new Digit(size);
         let col = (this.lcd.columns * this.numbers.length) + (this.numbers.length - 1);
-        this.board = Utils.matrix(this.lcd.rows, col);
+        this.board = matrix(this.lcd.rows, col);
         this.spaces_between_numbers = 1;
     }
 
@@ -25,7 +25,7 @@ class Board{
 
     print(){
         this.generate();
-        Utils.printMatrix(this.board);
+        printMatrix(this.board);
     }
 }
 
