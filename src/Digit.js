@@ -24,21 +24,61 @@ class Digit{
                 this.addRightBot(matrix);
                 return matrix;
             case 2:
-                break;
+                this.addTop(matrix);
+                this.addBot(matrix);
+                this.addMid(matrix);
+                this.addLeftBot(matrix);
+                this.addRightTop(matrix);
+                return matrix;
             case 3:
-                break;
+                this.addTop(matrix);
+                this.addBot(matrix);
+                this.addMid(matrix);
+                this.addRightBot(matrix);
+                this.addRightTop(matrix);
+                return matrix;
             case 4:
-                break;
+                this.addRightTop(matrix);
+                this.addRightBot(matrix);
+                this.addLeftTop(matrix);
+                this.addMid(matrix);
+                return matrix;
             case 5:
-                break;
+                this.addTop(matrix);
+                this.addBot(matrix);
+                this.addMid(matrix);
+                this.addLeftTop(matrix);
+                this.addRightBot(matrix);
+                return matrix;
             case 6:
-                break;
+                this.addTop(matrix);
+                this.addBot(matrix);
+                this.addMid(matrix);
+                this.addLeftTop(matrix);
+                this.addLeftBot(matrix);
+                this.addRightBot(matrix);
+                return matrix;
             case 7:
-                break;
+                this.addTop(matrix);
+                this.addRightTop(matrix);
+                this.addRightBot(matrix);
+                return matrix;
             case 8:
-                break;
+                this.addTop(matrix);
+                this.addBot(matrix);
+                this.addMid(matrix);
+                this.addLeftTop(matrix);
+                this.addLeftBot(matrix);
+                this.addRightTop(matrix);
+                this.addRightBot(matrix);
+                return matrix;
             case 9:
-                break;
+                this.addRightTop(matrix);
+                this.addRightBot(matrix);
+                this.addLeftTop(matrix);
+                this.addMid(matrix);
+                this.addTop(matrix);
+                return matrix;
         }
     }
 
@@ -75,6 +115,12 @@ class Digit{
     addRightBot(matrix){
         for(let row = Math.floor(this.rows / 2) + 1 ; row < this.rows - 1; row++){
             matrix[row][this.columns - 1] = this.vertical;
+        }
+    }
+
+    addMid(matrix){
+        for(let column = 1 ; column < this.columns - 1 ; column++){
+            matrix[Math.floor(this.rows / 2)][column] = this.horizontal;
         }
     }
 
