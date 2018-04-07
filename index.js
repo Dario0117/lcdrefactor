@@ -8,7 +8,10 @@ rl.setPrompt('Inserte el tamaño y los números (0,0 para terminar)> ');
 rl.prompt();
 
 rl.on('line', function (line) {
-    if (line === "0,0") rl.close();
+    if (line === "0,0") {
+        console.log(`Saliendo de la Board LCD... ;)`);
+        rl.close();
+    }
     try {
         let parsedInput = cleanParams(line);
         let board = new Board(parsedInput);
