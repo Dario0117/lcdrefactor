@@ -14,7 +14,7 @@ rl.on('line', function (line) {
         let board = new Board(parsedInput);
         board.print();
     }catch (e) {
-        console.log(e.toString());
+        console.log(e.message);
     }
     rl.prompt();
 }).on('close', function () {
