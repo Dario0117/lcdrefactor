@@ -1,5 +1,5 @@
 const should = require('chai').should();
-const { cleanParams, CONSTANTS } = require('../../src/Utils/index');
+const { cleanParams } = require('../../src/Utils/index');
 
 describe('Módulo de utilidades \'src/Utils\'', function () {
 

@@ -2,7 +2,7 @@ class Matrix {
     constructor(rows, cols) {
         this.matrix = new Array(rows);
         for (let i = 0; i < rows; i++) {
-            this.matrix[i] = new Array(cols);
+            this.matrix[i] = new Array(cols).fill(null);
         }
         this.lastColumnUsed = 0;
     }
