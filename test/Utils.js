@@ -6,11 +6,11 @@ describe('Módulo de utilidades \'src/Utils\'', function () {
     describe('Función: cleanParams', function () {
 
         it('Debería retornar los dos parámetros', function () {
-            for (let i = 1; i <= 10; i++) {
-                let params = i + ",123";
+            for (let size = 1; size <= 10; size++) {
+                let params = size + ",123";
                 let cleanedParams = cleanParams(params);
                 cleanedParams.should.have.property('size')
-                    .be.eq(i);
+                    .be.eq(size);
                 cleanedParams.should.have.property('numbers')
                     .deep.equal([1,2,3]);
             }
@@ -21,15 +21,15 @@ describe('Módulo de utilidades \'src/Utils\'', function () {
             it('Debería dar error al pasarle MENOS de 2 parámetros', function () {
 
                 (function (){
-                    cleanParams("1")
+                    cleanParams("1");
                 }).should.throw(Error, CONSTANTS.ERROR_INVALID_INPUT);
 
                 (function (){
-                    cleanParams(",1")
+                    cleanParams(",1");
                 }).should.throw(Error, CONSTANTS.ERROR_INVALID_INPUT);
 
                 (function (){
-                    cleanParams("")
+                    cleanParams("");
                 }).should.throw(Error, CONSTANTS.ERROR_INVALID_INPUT);
             });
 

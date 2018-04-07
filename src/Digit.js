@@ -1,4 +1,4 @@
-const { matrix } = require('./Utils');
+const { Matrix } = require('./Utils');
 
 class Digit{
     constructor(size){
@@ -9,7 +9,7 @@ class Digit{
     }
 
     generate(number){
-        let m = matrix(this.rows, this.columns);
+        let m = new Matrix(this.rows, this.columns);
         switch(number){
             case 0:
                 this.addTop(m);

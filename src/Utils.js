@@ -15,7 +15,7 @@ function cleanParams (input){
     return { size, numbers };
 }
 
-function matrix (rows, cols){
+function Matrix (rows, cols){
     let matrix = new Array(rows);
     for(let i = 0; i < rows; i++){
         matrix[i] = new Array(cols);
@@ -38,5 +38,5 @@ module.exports = {
     CONSTANTS,
     printMatrix,
     cleanParams,
-    matrix
+    Matrix
 };
