@@ -1,5 +1,4 @@
 # lcdrefactor
-Prueba técnica PSL
 
 Ejemplo de ejecución del programa
 
